@@ -33,7 +33,6 @@ categorias.forEach((categoria) => {
         const categoriaSeleccionada = categoria.getAttribute('data-categoria');
 
         seleccionarTipoPalabra(categoriaSeleccionada);
-        console.log(categoriaSeleccionada);
 
         // función para que el jugador introduzca su nombre
         pedirNombre();
@@ -57,7 +56,6 @@ function pedirNombre() {
     if (localStorage.getItem(nombre)) {
         // mostramos el div de los datos del usuario
         document.getElementById('datosUsuario').style.display = "grid";
-        console.log("El usuario existe en el localstorage.");
         // obtener los datos del usuario del localstorage
         let datosUsuario = JSON.parse(localStorage.getItem(nombre));
 
@@ -71,7 +69,6 @@ function pedirNombre() {
 
     }
     else {
-        console.log("El usuario no existe en el localstorage.");
 
         // un json para guardar los datos del jugador
         let jugador = {
@@ -161,8 +158,6 @@ function seleccionarTipoPalabra(categoria) {
             // convertir la palabra a array
             wordToGuess = wordToGuess.split("");
 
-            console.log("Palabra a averiguar: ", wordToGuess);
-
             // este split es simplementa para mostrar bien la palabra
             // mostrar la palabra en el DOM
             wordToGuess.forEach(() => {
@@ -208,8 +203,6 @@ for (let i = 0; i < botones.length; i++) {
 
         if (errores == lIntentos) {
             clearInterval(contador);
-            console.log("Se acabó el tiempo.", contador);
-            console.log("Palabra completa.");
             teclado.classList.add("d-none");
 
             // mostrar mensaje de perdedor
@@ -243,9 +236,6 @@ for (let i = 0; i < botones.length; i++) {
 
         if (checkWord()) {
             clearInterval(contador);
-            console.log("Has ganado!");
-
-            console.log(teclado);
         }
     });
 
@@ -269,7 +259,6 @@ for (let i = 0; i < botones.length; i++) {
 // función que comprueba si la letra está en la palabra
 function checkLetter(letter) {
     if (wordToGuess.includes(letter.toLowerCase()) || wordToGuess.includes(letter.toUpperCase())) {
-        console.log("Letra correcta.");
         // mostrar por pantalla
         // recorrer el array de la palabra
         wordToGuess.forEach((letraAdivinar, index) => {
@@ -281,7 +270,6 @@ function checkLetter(letter) {
         return true;
     }
     else {
-        console.log("Letra incorrecta.");
         return false;
     }
 }
@@ -302,8 +290,6 @@ function checkWord() {
 
     if (palabraCompleta) {
         clearInterval(contador);
-        console.log("Se acabó el tiempo.", contador);
-        console.log("Palabra completa.");
         teclado.classList.add("d-none");
 
         // mensaje de ganador

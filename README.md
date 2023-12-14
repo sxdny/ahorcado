@@ -14,7 +14,16 @@ Para realizar la instalación, **lo primero que tendremos que hacer** será clon
 git clone https://github.com/sxdny/ahorcado.git
 ```
 
-Una vez clonado, abrimeros el archivo `.html` con nuestro navegador favorito.
+Una vez clonado, abrimeros el archivo `.html` con nuestro navegador o editor de código favorito.
+
+![Abrir el archivo desde Visual Studio Code con Live Server](liveserver.gif)
+
+## Funcionalidad
+
+Las principales características del programa son las siguiente:
+- Habilidad de escoger distintos tipos de palabras (por tópico).
+- Almacenamiento de los datos varios usuarios. Algunos datos que se guardan son: nombre, partidas jugadas, tiempo total, etc.
+- Varios tipos de palabras para adivinar
 
 
 

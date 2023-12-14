@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #141414;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: 0.5s all ease-in-out;
+}
+
+
+#app {
+    display: grid;
+    height: 100%;
+}
+
+#juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.jsh {
+    color: black;
+    background-color: yellow;
+    padding: 0.6rem;
+}
+
+.palabra {
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 4rem;
+    margin: 2rem;
+}
+
+.teclado {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: center;
+
+    transition: 0.5s all ease-in-out;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.letra {
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+    border: 1px solid rgb(153, 153, 153);
+
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c2c2c2;
+    color: black;
+}
+
+#errores {
+    color: rgb(255, 59, 59);
+}
+
+#wordToGuess {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+#wordToGuess > li {
+    font-size: 3rem;
+    margin: 0 0.5rem;
+    text-decoration: underline;
+    background-color: #00000000;
+    border-bottom: 3px solid white;
+    text-decoration: none;
+}
+
+.letra-correcta {
+    color: green;
+    background-color: greenyellow;
+    cursor: default;
+}
+
+.letra-incorrecta {
+    color: red;
+    background-color: rgb(255, 117, 117);
+    cursor: default;
+}
+
+.letra-incorrecta:hover {
+    background-color: rgb(255, 117, 117);
+    color: red;
+}
+
+.letra-correcta:hover {
+    background-color: greenyellow;
+    color: green;
+}
+
+.contador-peligro {
+    color: red;
+}
+
+#startGame, #reset {
+    background-color: rgb(200, 255, 0);
+    border: 1px solid black;
+    color: black;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 15rem;
+    align-self: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+
+    transition: 0.2s ease-in;
+}
+
+#startGame:hover, #reset:hover {
+    background-color: rgb(255, 255, 0);
+    color: black;
+    font-size: 1.1rem;
+
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 0);
+}
+
+/* hacer que el titulo esté arriba */
+.titulo {
+    text-align: center;
+    font-size: 1rem;
+    background: linear-gradient(-45deg, rgb(11, 228, 83), rgb(88, 165, 52), #015f38, rgb(200, 255, 0));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    border-bottom: 1px solid rgb(102, 102, 102);
+    width: 100%;
+    padding: 2rem;
+    font-weight: 800;
+}
+
+.hoverStartGame {
+    background-color: #242424;
+
+    transition: 0.2s ease-in;
+}
+
+#mensajeFinal {
+    font-size: 84px;
+    font-weight: bold;
+    letter-spacing: -3px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.text-success {
+    background: -webkit-linear-gradient(rgb(128, 221, 6), rgb(221, 236, 11));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-danger {
+    background: -webkit-linear-gradient(rgb(117, 4, 0), rgb(236, 11, 11));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.categoryPicker {
+    border: 1px solid white;
+}
+
+.categoryPicker > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 75%;
+    gap: 3em;
+    justify-items: center;
+    align-items: center;
+    margin: 5rem;
+    transition: 0.5s all ease-in-out;
+}
+
+button[data-categoria] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #242424;
+    color: white;
+    border: 2px solid white;
+    border-top: 1px solid rgb(153, 153, 153);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+button[data-categoria] > p {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-top: 1px solid white;
+}
+
+button[data-categoria] > img {
+    width: 100%;
+    max-height: 100;
+    object-fit: contain;
+}
+
+button[data-categoria]:hover {
+    background-color: #c2c2c2;
+    color: black;
+}
+
+button[data-categoria]:hover > img {
+    opacity: 0.8;
+}
+
+.d-none {
+    display: none;
+}
+
+button[disabled][data-categoria] {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    cursor: default;
+}
+
+button[disabled][data-categoria]:hover {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    color: whitesmoke;
+}
+
+button[disabled][data-categoria]:hover > img {
+    opacity: 1;
+}
+
+#datosUsuario {
+    border: 1px solid white;
+    border-collapse: collapse;
+    margin: 1rem;
+}
+
+#datosUsuario tr {
+    border: 1px solid white;
+}
+
+th {
+    background-color: #242424;
+    border: 1px solid white;
+    padding: 1rem;
+}
+
+tr > td {
+    padding: 0.5rem;
+    border: 1px solid white;
+}
+
+
+/* animación para cambiar el fondo */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

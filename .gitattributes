@@ -307,5 +307,6 @@ node_modules/bluebird-lst filter=lfs diff=lfs merge=lfs -text
 dist/** filter=lfs diff=lfs merge=lfs -text
 node_modules/electron/dist/electron filter=lfs diff=lfs merge=lfs -text
 dist/win-unpacked/ahorcado.exe filter=lfs diff=lfs merge=lfs -text
+node_modules/electron/ahorcado.exe filter=lfs diff=lfs merge=lfs -text
 *.exe filter=lfs diff=lfs merge=lfs -text
 electron filter=lfs diff=lfs merge=lfs -text

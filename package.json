@@ -4,11 +4,16 @@
   "description": "El Juego del Ahorcado hecho por: Sidney Silva Braz de Oliveira 2º DAW.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "make": "electron-builder -w -c.extraMetadata.main=main.js"
   },
   "author": "Sidney Silva",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^28.0.0"
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "wine": "^0.9.13"
   }
 }

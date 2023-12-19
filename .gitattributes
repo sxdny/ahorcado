@@ -304,5 +304,6 @@ node_modules/proto-list filter=lfs diff=lfs merge=lfs -text
 node_modules/string-width filter=lfs diff=lfs merge=lfs -text
 node_modules/type-fest filter=lfs diff=lfs merge=lfs -text
 node_modules/bluebird-lst filter=lfs diff=lfs merge=lfs -text
+dist/** filter=lfs diff=lfs merge=lfs -text
 *.exe filter=lfs diff=lfs merge=lfs -text
 electron filter=lfs diff=lfs merge=lfs -text

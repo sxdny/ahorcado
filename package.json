@@ -1,0 +1,14 @@
+{
+  "name": "ahorcado",
+  "version": "1.0.0",
+  "description": "El Juego del Ahorcado hecho por: Sidney Silva Braz de Oliveira 2º DAW.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Sidney Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.0.0"
+  }
+}

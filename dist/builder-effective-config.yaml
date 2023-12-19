@@ -1,7 +1,3 @@
-directories:
-  output: dist
-  buildResources: build
-extraMetadata:
-  main: main.js
-files: []
-electronVersion: 28.0.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:a68a4ffc541aa408eb35e8242eccb5f696781d6e5b35275dfcf718ca454d3518
+size 117
